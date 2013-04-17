@@ -3,10 +3,6 @@ GEM
   specs:
     amazon-ec2 (0.9.17)
       xml-simple (>= 1.0.12)
-    net-ssh (2.6.7)
-    right_aws (3.0.5)
-      right_http_connection (>= 1.2.5)
-    right_http_connection (1.3.0)
     xml-simple (1.1.2)
 
 PLATFORMS
@@ -14,5 +10,3 @@ PLATFORMS
 
 DEPENDENCIES
   amazon-ec2
-  net-ssh
-  right_aws

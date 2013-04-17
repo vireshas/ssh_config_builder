@@ -1,4 +1,3 @@
-require "net/ssh"
 require "AWS"
 
 class EC2Helpers
