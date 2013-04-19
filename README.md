@@ -8,9 +8,9 @@ Say you have 2 app_servers, 3 background_servers and 2 db instances in AWS.
 This ruby script generates a .ssh/config file in the following format
 
 #sample .ssh/config file
-  Host app_server1
-    Hostname ec2****.com
-    User ubuntu
+  Host app_server1\n
+    Hostname ec2****.com\n
+    User ubuntu\n
 
   Host app_server1
     Hostname ec2****.com
