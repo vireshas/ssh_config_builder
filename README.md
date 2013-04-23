@@ -4,8 +4,9 @@ Creates a .ssh/config file from the ec2 instances tags.
 
 Usage
 -----
-EC2Helpers.new(ec2_access_key, ec2_secret_key, config_file_path).build_config_file  
-EC2Helpers.new(ec2_access_key, ec2_secret_key, "~/.ssh/config").build_config_file
+./ssh_config_builder.rb >> ~/.ssh/config
+
+Add right config to config.yml or they will be picked from AWS_ACCESS_KEY and AWS_SECRET_KEY environment variables.
 
 Example
 -------
@@ -14,7 +15,7 @@ This ruby script generates a .ssh/config file in the following format
 
 #sample .ssh/config file 
 
-    Host app_server1  
+    Host app_server    
       Hostname ec2****.com   
       User ubuntu  
 
@@ -22,7 +23,7 @@ This ruby script generates a .ssh/config file in the following format
       Hostname ec2****.com  
       User ubuntu  
     
-    Host background_server1  
+    Host background_server   
       Hostname ec2****.com  
       User ubuntu  
     

@@ -1,13 +1,16 @@
+#!/usr/bin/ruby
+
 require "AWS"
+require "yaml"
 
 class EC2Helpers
-  def initialize(key = nil, secret = nil, config_file = "ssh_config")
+  def initialize(key = nil, secret = nil, config_file = nil)
     if(key == nil && secret == nil)
       key, secret, config_file = get_config_from_yaml_of_env_variables
     end
     @access_key = key
     @secret_key = secret
-    @config_file = File.open(config_file, "a")
+    @config_file = config_file ? File.open(config_file, "a") : STDOUT
     @hostnames = {}
   end
 
@@ -16,7 +19,7 @@ class EC2Helpers
       config = YAML.load_file("./config.yml")
       [config["aws_access_key"], config["aws_secret_key"], config["ssh_config_file"]]
     elsif(ENV["AWS_ACCESS_KEY"] && ENV["AWS_SECRET_KEY"])
-      [ENV["AWS_ACCESS_KEY"], ENV["AWS_SECRET_KEY"], "ssh_config"]
+      [ENV["AWS_ACCESS_KEY"], ENV["AWS_SECRET_KEY"], nil]
     end
   end
 
@@ -74,3 +77,5 @@ class EC2Helpers
     instance['dnsName']
   end
 end
+
+EC2Helpers.new.build_config_file
