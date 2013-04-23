@@ -40,7 +40,7 @@ Installing ssh bookmarks autocomplete
 this commands adds few lines of bash code to ~/.bashrc or ~/.bash_profile which autocompletes HOST names
 ./install_autocomplete.rb           
 
-ssh App<press TAB>  
+ssh App[press TAB]  
 AppServer AppServer1 AppServer2   
 
 TODO
