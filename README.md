@@ -4,7 +4,7 @@ Creates a .ssh/config file from the ec2 instances tags.
 
 Usage
 -----
-EC2Helpers.new(ec2_access_key, ec2_secret_key, config_file_path).build_config_file
+EC2Helpers.new(ec2_access_key, ec2_secret_key, config_file_path).build_config_file  
 EC2Helpers.new(ec2_access_key, ec2_secret_key, "~/.ssh/config").build_config_file
 
 Example
