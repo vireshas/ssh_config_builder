@@ -2,6 +2,11 @@
 ==================
 Creates a .ssh/config file from the ec2 instances tags.
 
+Usage
+-----
+EC2Helpers.new(ec2_access_key, ec2_secret_key, config_file_path).build_config_file
+EC2Helpers.new(ec2_access_key, ec2_secret_key, "~/.ssh/config").build_config_file
+
 Example
 -------
 Say you have 2 app_servers, 3 background_servers and 2 db instances in AWS.
@@ -30,10 +35,6 @@ This ruby script generates a .ssh/config file in the following format
       User ubuntu  
 
 This .ssh/config can be kept up-to-date by running this ruby script frequently.
-
-Usage
------
-EC2Helpers.new(ec2_access_key, ec2_secret_key, config_file_path).build_config_file
 
 Installing autocomplete script
 ------------------------------
