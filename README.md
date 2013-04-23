@@ -42,6 +42,4 @@ Installing ssh bookmarks autocomplete
 
 TODO
 ----
-1.  Read aws keys from config file
-2.  Check if $AWS_ACCESS_KEY and $AWS_SECRET_KEY exists and use them
-3.  Create a deamon or cron job out of this script so that the .ssh/config is up-to-date
+1.  Create a deamon or cron job out of this script so that the .ssh/config is up-to-date
