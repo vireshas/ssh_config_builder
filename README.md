@@ -37,7 +37,7 @@ EC2Helpers.new(ec2_access_key, ec2_secret_key, config_file_path).build_config_fi
 
 Installing ssh bookmarks autocomplete
 -------------------------------------
-#this commands adds few lines of bash code to ~/.bashrc or ~/.bash_profile which autocompletes HOST names
+this commands adds few lines of bash code to ~/.bashrc or ~/.bash_profile which autocompletes HOST names
 ./install_autocomplete.rb           
 
 TODO
