@@ -6,7 +6,7 @@ require "yaml"
 class EC2Helpers
   def initialize(key = nil, secret = nil, config_file = nil)
     if(key == nil && secret == nil)
-      key, secret, config_file = get_config_from_yaml_of_env_variables
+      key, secret, config_file = get_config_from_yaml_or_env_variables
     end
     @access_key = key
     @secret_key = secret
@@ -14,7 +14,7 @@ class EC2Helpers
     @hostnames = {}
   end
 
-  def get_config_from_yaml_of_env_variables
+  def get_config_from_yaml_or_env_variables
     if File.exists?("./config.yml")
       config = YAML.load_file("./config.yml")
       [config["aws_access_key"], config["aws_secret_key"], config["ssh_config_file"]]
