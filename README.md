@@ -6,7 +6,7 @@ Usage
 -----
 ./ssh_config_builder.rb >> ~/.ssh/config
 
-Add right config to config.yml or they will be picked from AWS_ACCESS_KEY and AWS_SECRET_KEY environment variables.
+Add right config to config.yml or they will be picked from AWS_ACCESS_KEY and AWS_SECRET_KEY environment variables. You can dont specify a value to ssh_config_file inside config.yml, output will be thrown to your screen which you can redirect to any file.
 
 Example
 -------
