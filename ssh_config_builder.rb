@@ -48,16 +48,20 @@ class EC2Helpers
   end
 
   def ec2(filter = "")
-    @ec2 ||= AWS::EC2::Base.new(:access_key_id => @access_key , :secret_access_key => @secret_key )
-    all_instances = []
-    @tag_names = {}
-    all_instance_sets.each do |instance_set|
-      instances(instance_set).each do |instance|
-        all_instances << ec2_name(instance)
-        @tag_names[ec2_name(instance)] = tag_name_of(instance)
+    begin
+      @ec2 ||= AWS::EC2::Base.new(:access_key_id => @access_key , :secret_access_key => @secret_key )
+      all_instances = []
+      @tag_names = {}
+      all_instance_sets.each do |instance_set|
+        instances(instance_set).each do |instance|
+          all_instances << ec2_name(instance)
+          @tag_names[ec2_name(instance)] = tag_name_of(instance)
+        end
       end
+      all_instances.compact
+    rescue AWS::AuthFailure
+      puts "Please specify proper keys"
     end
-    all_instances.compact
   end
 
   def tag_name_of(instance)
