@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+require "rubygems"
 require "AWS"
 require "yaml"
 
