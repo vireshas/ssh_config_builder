@@ -4,15 +4,15 @@ Creates a .ssh/config file from the ec2 instances tags.
 
 Usage
 -----
-Assumptions
-  your have ruby, bundler installed
+Assumptions  
+  you have ruby, bundler installed
 
-First run:  bundle install
+First run:  bundle install  
 
-Add right config to config.yml or the defaul values will be picked from AWS_ACCESS_KEY and AWS_SECRET_KEY environment variables. You can specify path to ssh_config_file inside config.yml else output will be thrown to your screen which you can then redirect to any file.
+Add right config to config.yml or the defaul values will be picked from AWS_ACCESS_KEY and AWS_SECRET_KEY environment variables. You can specify path to ssh_config_file inside config.yml or else output will be thrown to your screen which you can then redirect to any file.
 
 Example Usage
-./ssh_config_builder.rb >> ~/.ssh/config
+./ssh_config_builder.rb >> ~/.ssh/config  
 
 Example
 -------
