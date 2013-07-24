@@ -46,7 +46,7 @@ This .ssh/config can be kept up-to-date by running this ruby script frequently.
 Installing autocomplete script
 ------------------------------
 This commands adds few lines of bash code to ~/.bashrc or ~/.bash_profile, which autocompletes HOST names
-./install_autocomplete.rb
+Usage:  ./install_autocomplete.rb
 
 ssh App[press TAB]  
 AppServer AppServer1 AppServer2
